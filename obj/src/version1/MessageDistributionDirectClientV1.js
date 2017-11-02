@@ -13,6 +13,24 @@ class MessageDistributionDirectClientV1 extends pip_services_net_node_1.DirectCl
         if (config != null)
             this.configure(thisConfig);
     }
+    sendMessage(correlationId, recipient, message, parameters, method, callback) {
+        parameters = this._defaultParameters.override(parameters);
+        let timing = this.instrument(correlationId, 'msg_distribution.send_message');
+        this._controller.sendMessage(correlationId, recipient, message, parameters, method, (err) => {
+            timing.endTiming();
+            if (callback)
+                callback(err);
+        });
+    }
+    sendMessages(correlationId, recipients, message, parameters, method, callback) {
+        parameters = this._defaultParameters.override(parameters);
+        let timing = this.instrument(correlationId, 'msg_distribution.send_messages');
+        this._controller.sendMessages(correlationId, recipients, message, parameters, method, (err) => {
+            timing.endTiming();
+            if (callback)
+                callback(err);
+        });
+    }
     sendMessageToRecipient(correlationId, recipientId, subscription, message, parameters, method, callback) {
         parameters = this._defaultParameters.override(parameters);
         let timing = this.instrument(correlationId, 'msg_distribution.send_message_to_recipient');

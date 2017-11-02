@@ -57,6 +57,10 @@ suite('MessageDistributionSenecaClient', () => {
         service.close(null, done);
     });
 
+    test('Send Message', (done) => {
+        fixture.testSendMessage(done);
+    });
+
     test('Send Message to Recipient', (done) => {
         fixture.testSendMessageToRecipient(done);
     });

@@ -10,6 +10,24 @@ class MessageDistributionLambdaClientV1 extends pip_services_aws_node_1.Commanda
         if (config != null)
             this.configure(thisConfig);
     }
+    sendMessage(correlationId, recipient, message, parameters, method, callback) {
+        parameters = this._defaultParameters.override(parameters);
+        this.callCommand('send_message', correlationId, {
+            recipient: recipient,
+            message: message,
+            parameters: parameters,
+            method: method
+        }, callback);
+    }
+    sendMessages(correlationId, recipients, message, parameters, method, callback) {
+        parameters = this._defaultParameters.override(parameters);
+        this.callCommand('send_messages', correlationId, {
+            recipients: recipients,
+            message: message,
+            parameters: parameters,
+            method: method
+        }, callback);
+    }
     sendMessageToRecipient(correlationId, recipientId, subscription, message, parameters, method, callback) {
         parameters = this._defaultParameters.override(parameters);
         this.callCommand('send_message_to_recipient', correlationId, {

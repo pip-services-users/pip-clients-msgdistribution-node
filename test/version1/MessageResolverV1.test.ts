@@ -41,7 +41,7 @@ suite('MessageResolverV1', () => {
         assert.isNull(message);
     });
 
-    test('Resolve template by id', (done) => {
+    test('Resolve template by id', () => {
         resolver.configure(ConfigParams.fromTuples(
             'message_templates.template1', '123'
         ));

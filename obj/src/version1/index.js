@@ -2,6 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var MessageV1_1 = require("./MessageV1");
 exports.MessageV1 = MessageV1_1.MessageV1;
+var RecipientV1_1 = require("./RecipientV1");
+exports.RecipientV1 = RecipientV1_1.RecipientV1;
 var DeliveryMethodV1_1 = require("./DeliveryMethodV1");
 exports.DeliveryMethodV1 = DeliveryMethodV1_1.DeliveryMethodV1;
 var MessageDistributionHttpClientV1_1 = require("./MessageDistributionHttpClientV1");

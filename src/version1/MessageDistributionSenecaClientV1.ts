@@ -3,6 +3,7 @@ import { IReferences } from 'pip-services-commons-node';
 import { CommandableSenecaClient } from 'pip-services-net-node';
 
 import { MessageV1 } from './MessageV1';
+import { RecipientV1 } from './RecipientV1';
 import { IMessageDistributionClientV1 } from './IMessageDistributionClientV1';
 
 export class MessageDistributionSenecaClientV1 extends CommandableSenecaClient implements IMessageDistributionClientV1 {
@@ -14,6 +15,40 @@ export class MessageDistributionSenecaClientV1 extends CommandableSenecaClient i
         let thisConfig = ConfigParams.fromValue(config);
         this._defaultParameters = thisConfig.getSection('parameters');
         if (config != null) this.configure(thisConfig);
+    }
+
+    public sendMessage(correlationId: string, recipient: RecipientV1,
+        message: MessageV1, parameters: ConfigParams, method: string,
+        callback?: (err: any) => void) {
+        parameters = this._defaultParameters.override(parameters);
+        this.callCommand(
+            'send_message',
+            correlationId,
+            {
+                recipient: recipient,
+                message: message,
+                parameters: parameters,
+                method: method
+            },
+            callback
+        );
+    }
+    
+    public sendMessages(correlationId: string, recipients: RecipientV1[],
+        message: MessageV1, parameters: ConfigParams, method: string,
+        callback?: (err: any) => void): void {
+        parameters = this._defaultParameters.override(parameters);
+        this.callCommand(
+            'send_messages',
+            correlationId,
+            {
+                recipients: recipients,
+                message: message,
+                parameters: parameters,
+                method: method
+            },
+            callback
+        );
     }
 
     public sendMessageToRecipient(correlationId: string, recipientId: string, subscription: string,
