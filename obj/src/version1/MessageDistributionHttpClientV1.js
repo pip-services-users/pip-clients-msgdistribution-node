@@ -4,7 +4,7 @@ const pip_services_commons_node_1 = require("pip-services-commons-node");
 const pip_services_net_node_1 = require("pip-services-net-node");
 class MessageDistributionHttpClientV1 extends pip_services_net_node_1.CommandableHttpClient {
     constructor(config) {
-        super('msg_distribution');
+        super('v1/msg_distribution');
         let thisConfig = pip_services_commons_node_1.ConfigParams.fromValue(config);
         this._defaultParameters = thisConfig.getSection('parameters');
         if (config != null)

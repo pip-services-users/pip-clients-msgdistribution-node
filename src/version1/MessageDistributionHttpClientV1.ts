@@ -10,7 +10,7 @@ export class MessageDistributionHttpClientV1 extends CommandableHttpClient imple
     private _defaultParameters: ConfigParams;
 
     constructor(config?: any) {
-        super('msg_distribution');
+        super('v1/msg_distribution');
 
         let thisConfig = ConfigParams.fromValue(config);
         this._defaultParameters = thisConfig.getSection('parameters');
