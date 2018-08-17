@@ -1,5 +1,5 @@
 import { Descriptor } from 'pip-services-commons-node';
-import { Factory } from 'pip-services-commons-node';
+import { Factory } from 'pip-services-components-node';
 
 import { MessageDistributionNullClientV1 } from '../version1/MessageDistributionNullClientV1';
 import { MessageDistributionDirectClientV1 } from '../version1/MessageDistributionDirectClientV1';

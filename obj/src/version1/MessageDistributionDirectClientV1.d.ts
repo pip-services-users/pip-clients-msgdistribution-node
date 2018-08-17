@@ -1,5 +1,5 @@
 import { ConfigParams } from 'pip-services-commons-node';
-import { DirectClient } from 'pip-services-net-node';
+import { DirectClient } from 'pip-services-rpc-node';
 import { IMessageDistributionClientV1 } from './IMessageDistributionClientV1';
 import { MessageV1 } from './MessageV1';
 import { RecipientV1 } from './RecipientV1';

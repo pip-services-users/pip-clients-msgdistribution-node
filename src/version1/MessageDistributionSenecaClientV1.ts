@@ -1,6 +1,6 @@
 import { ConfigParams } from 'pip-services-commons-node';
 import { IReferences } from 'pip-services-commons-node';
-import { CommandableSenecaClient } from 'pip-services-net-node';
+import { CommandableSenecaClient } from 'pip-services-seneca-node';
 
 import { MessageV1 } from './MessageV1';
 import { RecipientV1 } from './RecipientV1';
