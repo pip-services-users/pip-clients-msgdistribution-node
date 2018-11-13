@@ -20,6 +20,7 @@ export class MessageDistributionHttpClientV1 extends CommandableHttpClient imple
     public sendMessage(correlationId: string, recipient: RecipientV1,
         message: MessageV1, parameters: ConfigParams, method: string,
         callback?: (err: any) => void) {
+        console.log("!!! mgmDistr client sendMessage")
         parameters = this._defaultParameters.override(parameters);
         this.callCommand(
             'send_message',
@@ -33,10 +34,11 @@ export class MessageDistributionHttpClientV1 extends CommandableHttpClient imple
             callback
         );
     }
-    
+
     public sendMessages(correlationId: string, recipients: RecipientV1[],
         message: MessageV1, parameters: ConfigParams, method: string,
         callback?: (err: any) => void): void {
+        console.log("!!! mgmDistr client sendMessages")
         parameters = this._defaultParameters.override(parameters);
         this.callCommand(
             'send_messages',
@@ -54,6 +56,7 @@ export class MessageDistributionHttpClientV1 extends CommandableHttpClient imple
     public sendMessageToRecipient(correlationId: string, recipientId: string, subscription: string,
         message: MessageV1, parameters: ConfigParams, method: string,
         callback?: (err: any) => void) {
+        console.log("!!! mgmDistr client sendMessageToRecipient")
         parameters = this._defaultParameters.override(parameters);
         this.callCommand(
             'send_message_to_recipient',
@@ -72,6 +75,7 @@ export class MessageDistributionHttpClientV1 extends CommandableHttpClient imple
     public sendMessageToRecipients(correlationId: string, recipientIds: string[], subscription: string,
         message: MessageV1, parameters: ConfigParams, method: string,
         callback?: (err: any) => void): void {
+        console.log("!!! mgmDistr client sendMessageToRecipients")
         parameters = this._defaultParameters.override(parameters);
         this.callCommand(
             'send_message_to_recipients',
