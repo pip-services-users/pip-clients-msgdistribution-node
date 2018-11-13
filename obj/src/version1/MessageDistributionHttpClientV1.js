@@ -11,7 +11,6 @@ class MessageDistributionHttpClientV1 extends pip_services_rpc_node_1.Commandabl
             this.configure(thisConfig);
     }
     sendMessage(correlationId, recipient, message, parameters, method, callback) {
-        console.log("!!! mgmDistr client sendMessage");
         parameters = this._defaultParameters.override(parameters);
         this.callCommand('send_message', correlationId, {
             recipient: recipient,
@@ -21,7 +20,6 @@ class MessageDistributionHttpClientV1 extends pip_services_rpc_node_1.Commandabl
         }, callback);
     }
     sendMessages(correlationId, recipients, message, parameters, method, callback) {
-        console.log("!!! mgmDistr client sendMessages");
         parameters = this._defaultParameters.override(parameters);
         this.callCommand('send_messages', correlationId, {
             recipients: recipients,
@@ -31,7 +29,6 @@ class MessageDistributionHttpClientV1 extends pip_services_rpc_node_1.Commandabl
         }, callback);
     }
     sendMessageToRecipient(correlationId, recipientId, subscription, message, parameters, method, callback) {
-        console.log("!!! mgmDistr client sendMessageToRecipient");
         parameters = this._defaultParameters.override(parameters);
         this.callCommand('send_message_to_recipient', correlationId, {
             recipient_id: recipientId,
@@ -42,7 +39,6 @@ class MessageDistributionHttpClientV1 extends pip_services_rpc_node_1.Commandabl
         }, callback);
     }
     sendMessageToRecipients(correlationId, recipientIds, subscription, message, parameters, method, callback) {
-        console.log("!!! mgmDistr client sendMessageToRecipients");
         parameters = this._defaultParameters.override(parameters);
         this.callCommand('send_message_to_recipients', correlationId, {
             recipient_ids: recipientIds,
