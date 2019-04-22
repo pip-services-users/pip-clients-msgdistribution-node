@@ -2,7 +2,7 @@ let _ = require('lodash');
 let async = require('async');
 let assert = require('chai').assert;
 
-import { ConfigParams } from 'pip-services-commons-node';
+import { ConfigParams } from 'pip-services3-commons-node';
 import { MessageV1 } from '../../src/version1/MessageV1';
 import { RecipientV1 } from '../../src/version1/RecipientV1';
 import { DeliveryMethodV1 } from '../../src/version1/DeliveryMethodV1';

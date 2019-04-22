@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 let _ = require('lodash');
-const pip_services_commons_node_1 = require("pip-services-commons-node");
-const pip_services_commons_node_2 = require("pip-services-commons-node");
+const pip_services3_commons_node_1 = require("pip-services3-commons-node");
+const pip_services3_commons_node_2 = require("pip-services3-commons-node");
 class MessageResolverV1 {
     constructor(config) {
-        this._config = new pip_services_commons_node_1.ConfigParams();
+        this._config = new pip_services3_commons_node_1.ConfigParams();
         this._messages = {};
         if (config != null)
             this.configure(config);
@@ -58,7 +58,7 @@ class MessageResolverV1 {
         for (let index = 0; index < tuples.length; index += 2) {
             if (index + 1 >= tuples.length)
                 break;
-            let name = pip_services_commons_node_2.StringConverter.toString(tuples[index]);
+            let name = pip_services3_commons_node_2.StringConverter.toString(tuples[index]);
             let template = tuples[index + 1];
             result.put(name, template);
         }

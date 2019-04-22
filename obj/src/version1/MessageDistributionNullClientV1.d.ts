@@ -1,4 +1,4 @@
-import { ConfigParams } from 'pip-services-commons-node';
+import { ConfigParams } from 'pip-services3-commons-node';
 import { IMessageDistributionClientV1 } from './IMessageDistributionClientV1';
 import { MessageV1 } from './MessageV1';
 import { RecipientV1 } from './RecipientV1';

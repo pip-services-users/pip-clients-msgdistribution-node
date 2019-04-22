@@ -1,5 +1,5 @@
-import { ConfigParams } from 'pip-services-commons-node';
-import { IReconfigurable } from 'pip-services-commons-node';
+import { ConfigParams } from 'pip-services3-commons-node';
+import { IReconfigurable } from 'pip-services3-commons-node';
 import { MessageV1 } from './MessageV1';
 export declare class MessageResolverV1 implements IReconfigurable {
     private _config;

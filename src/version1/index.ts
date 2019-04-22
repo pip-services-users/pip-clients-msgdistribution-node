@@ -3,7 +3,6 @@ export { RecipientV1 } from './RecipientV1';
 export { DeliveryMethodV1 } from './DeliveryMethodV1';
 export { IMessageDistributionClientV1 } from './IMessageDistributionClientV1';
 export { MessageDistributionHttpClientV1 } from './MessageDistributionHttpClientV1';
-export { MessageDistributionSenecaClientV1 } from './MessageDistributionSenecaClientV1';
 export { MessageDistributionLambdaClientV1 } from './MessageDistributionLambdaClientV1';
 export { MessageDistributionDirectClientV1 } from './MessageDistributionDirectClientV1';
 export { MessageDistributionNullClientV1 } from './MessageDistributionNullClientV1';

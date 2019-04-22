@@ -1,8 +1,8 @@
 let _ = require('lodash');
 
-import { ConfigParams } from 'pip-services-commons-node';
-import { IReconfigurable } from 'pip-services-commons-node';
-import { StringConverter } from 'pip-services-commons-node';
+import { ConfigParams } from 'pip-services3-commons-node';
+import { IReconfigurable } from 'pip-services3-commons-node';
+import { StringConverter } from 'pip-services3-commons-node';
 
 import { MessageV1 } from './MessageV1';
 
