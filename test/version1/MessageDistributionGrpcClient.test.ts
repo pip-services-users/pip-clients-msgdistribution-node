@@ -12,9 +12,9 @@ import { EmailNullClientV1 } from 'pip-clients-email-node';
 import { SmsNullClientV1 } from 'pip-clients-sms-node';
 
 import { MessageDistributionController } from 'pip-services-msgdistribution-node';
-import { MessageDistributionHttpServiceV1 } from 'pip-services-msgdistribution-node';
+import { MessageDistributionGrpcServiceV1 } from 'pip-services-msgdistribution-node';
 import { IMessageDistributionClientV1 } from '../../src/version1/IMessageDistributionClientV1';
-import { MessageDistributionHttpClientV1 } from '../../src/version1/MessageDistributionHttpClientV1';
+import { MessageDistributionGrpcClientV1 } from '../../src/version1/MessageDistributionGrpcClientV1';
 import { MessageDistributionClientFixtureV1 } from './MessageDistributionClientFixtureV1';
 
 var httpConfig = ConfigParams.fromTuples(
@@ -23,15 +23,14 @@ var httpConfig = ConfigParams.fromTuples(
     "connection.port", 3000
 );
 
-suite('MessageDistributionHttpClientV1', ()=> {
-    let service: MessageDistributionHttpServiceV1;
-    let client: MessageDistributionHttpClientV1;
+suite('MessageDistributionGrpcClientV1', ()=> {
+    let service: MessageDistributionGrpcServiceV1;
+    let client: MessageDistributionGrpcClientV1;
     let fixture: MessageDistributionClientFixtureV1;
 
     suiteSetup((done) => {
         let logger = new ConsoleLogger();
         let controller = new MessageDistributionController();
-        controller.configure(new ConfigParams());
 
         let emailSettingsClient = new EmailSettingsMemoryClientV1();
         emailSettingsClient.setSettings(null, { id: '1', name: 'User 1', email: 'somebody@somewhere.com' });
@@ -41,8 +40,8 @@ suite('MessageDistributionHttpClientV1', ()=> {
 
         let emailDeliveryClient = new EmailNullClientV1();
         let smsDeliveryClient = new SmsNullClientV1();
-
-        service = new MessageDistributionHttpServiceV1();
+        
+        service = new MessageDistributionGrpcServiceV1();
         service.configure(httpConfig);
 
         let references: References = References.fromTuples(
@@ -52,12 +51,12 @@ suite('MessageDistributionHttpClientV1', ()=> {
             new Descriptor('pip-services-email', 'client', 'null', 'default', '1.0'), emailDeliveryClient,
             new Descriptor('pip-services-sms', 'client', 'null', 'default', '1.0'), smsDeliveryClient,
             new Descriptor('pip-services-msgdistribution', 'controller', 'default', 'default', '1.0'), controller,
-            new Descriptor('pip-services-msgdistribution', 'service', 'http', 'default', '1.0'), service
+            new Descriptor('pip-services-msgdistribution', 'service', 'grpc', 'default', '1.0'), service
         );
         controller.setReferences(references);
         service.setReferences(references);
 
-        client = new MessageDistributionHttpClientV1();
+        client = new MessageDistributionGrpcClientV1();
         client.setReferences(references);
         client.configure(httpConfig);
 
