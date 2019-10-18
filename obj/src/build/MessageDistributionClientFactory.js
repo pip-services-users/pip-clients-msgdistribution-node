@@ -19,6 +19,7 @@ class MessageDistributionClientFactory extends pip_services3_components_node_1.F
         this.registerAsType(MessageDistributionClientFactory.GrpcClientV1Descriptor, MessageDistributionGrpcClientV1_1.MessageDistributionGrpcClientV1);
     }
 }
+exports.MessageDistributionClientFactory = MessageDistributionClientFactory;
 MessageDistributionClientFactory.Descriptor = new pip_services3_commons_node_1.Descriptor('pip-services-msgdistribution', 'factory', 'default', 'default', '1.0');
 MessageDistributionClientFactory.NullClientV1Descriptor = new pip_services3_commons_node_1.Descriptor('pip-services-msgdistribution', 'client', 'null', 'default', '1.0');
 MessageDistributionClientFactory.DirectClientV1Descriptor = new pip_services3_commons_node_1.Descriptor('pip-services-msgdistribution', 'client', 'direct', 'default', '1.0');
@@ -26,5 +27,4 @@ MessageDistributionClientFactory.HttpClientV1Descriptor = new pip_services3_comm
 MessageDistributionClientFactory.LambdaClientV1Descriptor = new pip_services3_commons_node_1.Descriptor('pip-services-msgdistribution', 'client', 'lambda', 'default', '1.0');
 MessageDistributionClientFactory.CommandableGrpcClientV1Descriptor = new pip_services3_commons_node_1.Descriptor('pip-services-msgdistribution', 'client', 'commandable-grpc', 'default', '1.0');
 MessageDistributionClientFactory.GrpcClientV1Descriptor = new pip_services3_commons_node_1.Descriptor('pip-services-msgdistribution', 'client', 'grpc', 'default', '1.0');
-exports.MessageDistributionClientFactory = MessageDistributionClientFactory;
 //# sourceMappingURL=MessageDistributionClientFactory.js.map

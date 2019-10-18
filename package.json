@@ -61,11 +61,11 @@
         "chai": "*",
         "mocha": "*",
         "aws-sdk": "*",
-        "pip-clients-emailsettings-node": "git+ssh://git@github.com:pip-services-users/pip-clients-emailsettings-node.git",
-        "pip-clients-smssettings-node": "git+ssh://git@github.com:pip-services-users/pip-clients-smssettings-node.git",
-        "pip-clients-email-node": "git+ssh://git@github.com:pip-services-infrastructure/pip-clients-email-node.git",
-        "pip-clients-sms-node": "git+ssh://git@github.com:pip-services-infrastructure/pip-clients-sms-node.git",
-        "pip-clients-msgtemplates-node": "git+ssh://git@github.com:pip-services-content/pip-clients-msgtemplates-node.git",
-        "pip-services-msgdistribution-node": "git+ssh://git@github.com:pip-services-users/pip-services-msgdistribution-node.git"
+        "pip-clients-emailsettings-node": "^1.0.0",
+        "pip-clients-smssettings-node": "^1.0.0",
+        "pip-clients-email-node": "^1.0.2",
+        "pip-clients-sms-node": "^1.0.0",
+        "pip-clients-msgtemplates-node": "^1.1.0",
+        "pip-services-msgdistribution-node": "^1.0.1"
     }
 }
