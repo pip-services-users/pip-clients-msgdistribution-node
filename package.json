@@ -1,6 +1,6 @@
 {
     "name": "pip-clients-msgdistribution-node",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "Conceptual Vision Consulting LLC",
     "description": "Node.js client sdk for pip-services-msgdistribution microservice",
     "contributors": [
@@ -55,17 +55,14 @@
         "@types/async": "^2.0.0",
         "@types/chai": "*",
         "@types/mocha": "*",
-        "@types/mongodb": "^2.1.38",
-        "@types/mongoose": "^4.7.4",
         "restify": "^4.3.0",
         "chai": "*",
         "mocha": "*",
-        "aws-sdk": "*",
-        "pip-clients-emailsettings-node": "^1.0.0",
-        "pip-clients-smssettings-node": "^1.0.0",
-        "pip-clients-email-node": "^1.0.2",
-        "pip-clients-sms-node": "^1.0.0",
-        "pip-clients-msgtemplates-node": "^1.1.0",
-        "pip-services-msgdistribution-node": "^1.0.1"
+        "pip-clients-emailsettings-node": "^1.0.1",
+        "pip-clients-smssettings-node": "^1.0.1",
+        "pip-clients-email-node": "^1.0.3",
+        "pip-clients-sms-node": "^1.0.1",
+        "pip-clients-msgtemplates-node": "^1.1.1",
+        "pip-services-msgdistribution-node": "^1.1.0"
     }
 }
